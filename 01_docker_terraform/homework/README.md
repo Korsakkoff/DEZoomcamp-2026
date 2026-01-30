@@ -22,7 +22,7 @@ exit
 ## Question 2. Understanding Docker networking and docker-compose
 ```bash
 # Create the docker-compose.yaml file inside homework folder, then run it.
-docker-compose up
+docker compose up
 ```
 <details>
 <summary>pgAdmin</summary>
@@ -47,7 +47,7 @@ wget https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2025-11.parq
 wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv
 
 # Run docker compose
-docker-compose up
+docker compose up
 
 # Go to homework directory and go into docker bash
 cd 01_docker_terraform/homework/
