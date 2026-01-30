@@ -25,8 +25,9 @@ exit
 docker-compose up
 ```
 <details>
-<summary>pgAdmin access</summary>
+<summary>pgAdmin</summary>
 
+**Access**
 - URL: http://127.0.0.1:8080/browser/
 - Username: `pgadmin@pgadmin.com`
 - Password: `pgadmin`
