@@ -1,6 +1,6 @@
-Module 1 Homework: Docker & SQL
+# Module 1 Homework: Docker & SQL
 
-Question 1. Understanding Docker images
+# Question 1. Understanding Docker images
 ```bash
 # Go to homework directory
 cd 01_docker_terraform/homework/
@@ -19,30 +19,27 @@ exit
 ```
 
 
-
-Question 2. Understanding Docker networking and docker-compose
-<!-- Create de docker-compose.yaml inside homework folder. -->
+# Question 2. Understanding Docker networking and docker-compose
 ```bash
+# Create the docker-compose.yaml file inside homework folder, then run it.
 docker-compose up
 ```
-# Access pgAdmin via webBrowser
 <!--
-    http://127.0.0.1:8080/browser/
-    Username: pgadmin@pgadmin.com
-    Password: pgadmin
+Access pgAdmin via webBrowser
+	http://127.0.0.1:8080/browser/
+	Username: pgadmin@pgadmin.com
+	Password: pgadmin
+
+
+Register Server
+	Name: Postgres
+	Host name/address: db
+	Port: 5432
+	Username: postgres
+	Password: postgres 
 -->
 
-# Register Server
-<!-- 
-    Name: Postgres
-    Host name/address: db
-    Port: 5432
-    Username: postgres
-    Password: postgres 
--->
-
-
-# Prepare the Data
+Prepare the Data
 ```bash
 # Download the data
 wget https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2025-11.parquet 
@@ -51,29 +48,26 @@ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_z
 # Run docker compose
 docker-compose up
 
-# Test on notebook
-# Open another terminal
 # Go to homework directory and go into docker bash
 cd 01_docker_terraform/homework/
 docker compose exec notebook bash
 
-# Test the CSV data in Jupyter notebook.
 # Jupyter notebook to python script.
 jupyter nbconvert \
   --to=script \
   --output=dim_taxi_zone_ingest \
   notebook.ipynb
 
-# Run the Script to ingest taxi done data.
+# Run the Script to ingest taxi zone data.
 python dim_taxi_zone_ingest.py
 
-# Test the parquet data in Jupyter notebook.
 # Jupyter notebook to python script 
 jupyter nbconvert \
   --to=script \
   --output=facts_green_tripdata \
   notebook_parquet.ipynb
 
+# Run the Script to ingest taxi green data.
 python facts_green_tripdata.py
 ```
 
