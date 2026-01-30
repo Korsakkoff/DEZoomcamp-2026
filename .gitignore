@@ -11,6 +11,7 @@
 
 # Env files
 .env
+.env.kestra
 
 # OS / editor
 .DS_Store
