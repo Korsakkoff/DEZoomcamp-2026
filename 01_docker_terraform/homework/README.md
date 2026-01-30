@@ -1,6 +1,6 @@
 # Module 1 Homework: Docker & SQL
 
-# Question 1. Understanding Docker images
+## Question 1. Understanding Docker images
 ```bash
 # Go to homework directory
 cd 01_docker_terraform/homework/
@@ -19,25 +19,25 @@ exit
 ```
 
 
-# Question 2. Understanding Docker networking and docker-compose
+## Question 2. Understanding Docker networking and docker-compose
 ```bash
 # Create the docker-compose.yaml file inside homework folder, then run it.
 docker-compose up
 ```
-<!--
-Access pgAdmin via webBrowser
-	http://127.0.0.1:8080/browser/
-	Username: pgadmin@pgadmin.com
-	Password: pgadmin
+<details>
+<summary>pgAdmin access</summary>
 
+- URL: http://127.0.0.1:8080/browser/
+- Username: `pgadmin@pgadmin.com`
+- Password: `pgadmin`
 
-Register Server
-	Name: Postgres
-	Host name/address: db
-	Port: 5432
-	Username: postgres
-	Password: postgres 
--->
+**Server configuration**
+- Host: `db`
+- Port: `5432`
+- Username: `postgres`
+- Password: `postgres`
+
+</details>
 
 Prepare the Data
 ```bash
@@ -72,7 +72,7 @@ python facts_green_tripdata.py
 ```
 
 <!-- Run SQL Queries on pgAdmin. -->
-# Question 3. Counting short trips
+## Question 3. Counting short trips
 ```sql
 SELECT 
     COUNT(*)
@@ -82,7 +82,7 @@ WHERE
 	lpep_pickup_datetime >= '2025-11-01' AND lpep_pickup_datetime < '2025-12-01' AND trip_distance <=1
 ```
 
-# Question 4. Longest trip for each day
+## Question 4. Longest trip for each day
 ```sql
 SELECT
 	DATE(lpep_pickup_datetime) AS "date",
@@ -98,7 +98,7 @@ ORDER BY
 LIMIT 1
 ```
 
-# Question 5. Biggest pickup zone
+## Question 5. Biggest pickup zone
 ```sql
 SELECT 
 	taxi_zone."Zone", 
@@ -115,7 +115,7 @@ ORDER BY
 LIMIT 1
 ```
 
-# Question 6. Largest tip
+## Question 6. Largest tip
 ```sql
 SELECT 
 	dropoff_zone."Zone", 
