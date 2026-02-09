@@ -1,0 +1,1 @@
+1. crear docker compose yaml con un docker con jupyter pytho pyarrow

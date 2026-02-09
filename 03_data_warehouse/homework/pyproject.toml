@@ -1,0 +1,19 @@
+[project]
+name = "data_warehouse_homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "pandas>=3.0.0",
+    "pyarrow>=23.0.0",
+    "tqdm>=4.67.1",
+    "google-cloud-bigquery",
+    "google-cloud-storage",
+    "dlt[duckdb,bigquery,gs]",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab",
+]
