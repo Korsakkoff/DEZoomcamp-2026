@@ -1,0 +1,22 @@
+services:
+  uploader:
+    build: .
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /mnt/c/Users/didac/.gcp/kestra.json:/secrets/gcp-sa.json:ro
+    command: ["python", "upload.py"]
+
+  jupyter:
+    build: .
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /mnt/c/Users/didac/.gcp/kestra.json:/secrets/gcp-sa.json:ro
+    ports:
+      - "8888:8888"
+    command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
