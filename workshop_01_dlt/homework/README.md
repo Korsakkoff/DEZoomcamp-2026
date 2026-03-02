@@ -33,6 +33,10 @@ marimo edit taxi_payment_methods_app.py
 ## Question 3: What is the total amount of money generated in tips?
 Using dlt MCP Server to request the agent to create a Python script to retrieve results from the duckdb database:
 
+```bash
+python query.py
+```
+
 <p align="center">
   <img src="../../assets/homework/workshop_dlt/question3.jpg">
 </p>
