@@ -20,6 +20,10 @@
 # Otros
 *.parquet
 *.duckdb
+*.parquet.crc
+*.csv.gz
+*.csv
+spark-env/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
